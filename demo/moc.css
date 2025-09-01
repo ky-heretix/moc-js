@@ -1,0 +1,36 @@
+header { text-align: left; font-weight: bold; }
+footer { text-align: right; font-weight: bold; color: gray; }
+h1 { text-align: center; }
+
+.ctrl { padding: 0.5ex; text-align: center; }
+.ctrl button { font-size: 0.8em; }
+
+.knob {
+	font-size: 0.8em;
+	text-align: center;
+        cursor: pointer;
+	color: gray;
+	background: linear-gradient(transparent 50%, lightgray 100%);
+}
+
+details {
+	max-height: 3em;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+details[open] {
+	max-height: 500em;
+	margin-bottom: 1ex;
+	background-color: #FFFFFF;
+}
+summary {
+	list-style: none;
+	margin: 0 1.5em;
+	font-weight: bold;
+	font-size: 120%;
+	text-decoration: underline;
+}
+summary:hover { color: blue; }
+summary::marker { content: "🟩 "; }
+details[open] summary::marker { content: "🟥 "; }
+
