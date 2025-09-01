@@ -17,7 +17,8 @@ HTML の `<details>`＆`<summary>`タグを利用すると，
 目次のどの項目を開くべきか不明．
 
 本スクリプト `moc.js` は，これらの問題点を解決します．
-まあ，[デモ（外部サイト）](https://www.kushiro-ct.ac.jp/yanagawa/moc-js/demo/index.html) でも御覧ください．
+まあ，<a href="https://www.kushiro-ct.ac.jp/yanagawa/moc-js/demo/index.html"
+target="_blank">デモ（外部サイト）</a>でも御覧ください．
 「御品書だよ `<summary>` は．」
 
 ## ウェブサイトへの導入方法
@@ -26,7 +27,7 @@ HTML の `<details>`＆`<summary>`タグを利用すると，
 
 ## ウェブページの編集作業
 ウェブページ編集時の必須の追加作業は次の３点だけです．
-（元々，`details`＆`<summary>` を使っていた場合の話です．）
+（元々，`<details>`＆`<summary>` を使っていた場合の話です．）
 
 - スクリプトの読込 `<script src="moc.js"></script>`
 - `<body>` への `onload="Init()"` の付与
