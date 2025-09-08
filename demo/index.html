@@ -2,30 +2,118 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="moc.css">
 <script src="moc.js"></script>
 </head>
-<body onload="Init();">
+<body>
 <h1>御品書だよ &lt;summary&gt; は</h1>
-<a href="https://github.com/ky-heretix/moc-js/" target="_blank">GitHub</a>
 <p>
-HTML ソースを表示し，比較してください．
-ページのレンダリング結果には，
-ヘッダ・フッタ・Open／Closeボタンが自動的に追加されていますね．
+横着者のためのウェブページ目次生成プラグインスクリプト
+<code>moc.js</code>のデモです．
+使用／不使用を切り替えて見てください．
+<button onclick="window.location.replace('?moc=on')">moc.js 使用</button>
+<button onclick="window.location.replace('?moc=off')">moc.js 不使用</button>
+</p>
+<details id="toc" open>
+<summary>目次・本文</summary>
+<details id="c1">
+<summary>第１章 はじめに</summary>
+<p>
+このウェブページは，簡素なHTMLへの<code>moc.js</code>の適用例です．
+ウェブページに目次リストを追加するために，
+わざわざ，<code>&lt;ul&gt;&lt;a href="#..."&gt;</code>等を
+追記する必要はありません．
+HTMLファイル作成時に
+<code>&lt;details&gt;</code>および<code>&lt;summary&gt;</code>を利用しておけば，
+それら自身が目次リストとして働きます．
+そして，「<code>&lt;script src="<a href="moc.js">moc.js</a>"&gt;&lt;/script&gt;</code>」
+を追記するだけでOKです．
 </p>
 <p>
-目次を開いてください．
+<a href="#c2">第２章</a>では，moc.jsの主な機能を紹介します．
+（リンクのクリックで折り畳まれているセクションが展開されます．）
 </p>
-<details id="ToC">
-<summary>目次</summary>
-<ul>
-<li><a href="index1.html">本文ページ</a>
-<li><a href="index2.html">資料ページ</a>
-</ul>
 <p>
-セクション末尾には，クローズハンドルが自動的に追加されている筈です．
+<a href="#c3">第３章</a>は，多重<code>&lt;details&gt;</code>の例です．
+（無意味に作者宅の黒猫達の紹介です．）
 </p>
 </details>
+
+<details id="c2">
+<summary>第２章 <code>moc.js</code>の機能</summary>
+<ul>
+<li><code>&lt;details&gt;</code>セクションの末尾に折畳ハンドルが出現します．
+<li>多重<code>&lt;details&gt;</code>にも対応しており，
+内側のセクションにアクセスすると外側のセクションも連鎖的に展開されます．
+（例：<a href="#s3_1">第3.1節</a>，
+<a href="#s3_2">第3.2節</a>，
+<a href="#s3_3">第3.3節</a>，
+<a href="#s3_4">第3.4節</a>）
+<li>設定ファイル<a href="site.js"><code>site.js</code></a>により，
+ページのヘッダ・フッタ・等も自動生成されます．
+<li>CSSファイル<a href="site.css"><code>site.css </code></a>が自動適用されます．
+</ul>
+</details id=c2>
+
+<details id="c3">
+<summary>第３章 黒猫集団</summary>
+<details id="s3_1"><summary>3.1 ひぐま</summary>
+<a href="img/kuma.jpg"><img src="img/kuma.jpg" height="150"></a>
+<a href="img/kuma-202409.jpg"><img src="img/kuma-202409.jpg" height="150"></a>
+愛称：くま，ひぐちゃん．
+オス．2023.03捕獲，当時推定５才．
+おそらく元ボスの武闘派．
+お触りはパンチ覚悟でOK．ゴアゴア→サラサラ．
+</details>
+
+<details id="s3_2"><summary>3.2 クロモ</summary>
+<a href="img/choy.jpg"><img src="img/choy.jpg" height="150"></a>
+<a href="img/choy2.jpg"><img src="img/choy2.jpg" height="150"></a>
+愛称：ちょいちょい．
+メス．2024.05捕獲，当時推定２才．
+昼はビビリ，夜はアスリート，ボンベイ系スーパーモデル体型．
+お触りは，ちょっとだけよ．ツヤツヤ．
+</details>
+
+<details id="s3_3"><summary>3.3 ミニクロ</summary>
+<a href="img/mini.jpg"><img src="img/mini.jpg" height="150"></a>
+愛称：ミニちゃん．
+メス．2024.09捕獲，当時推定３才．
+ケージ出所後しばし幻の猫だったが，一年後の現在は他猫と一緒に居間に入り浸り．
+しかし，まだ，お触り不可．
+</details>
+
+<details id="s3_4"><summary>3.4 こまっくろ</summary>
+<a href="img/koma.jpg"><img src="img/koma.jpg" height="150"></a>
+<!--
+<a href="img/koma2.jpg"><img src="img/koma2.jpg" height="150"></a>
+<a href="img/koma3.jpg"><img src="img/koma3.jpg" height="150"></a>
+-->
+<a href="img/koma-202412.jpg"><img src="img/koma-202412.jpg" height="150"></a>
+愛称：こまちゃん．
+オス．2024.11捕獲，当時推定５才．
+顔デカおっとり系ブリ雑種ショートヘア．
+新入りのクセに当初から，お触りウェルカム．モフモフ．
+</details>
+
+<details id="s3_5"><summary>3.5 スナップ</summary>
+<a href="img/three-202409.jpg"><img src="img/three-202409.jpg" height="150"></a>
+<a href="img/three-202512.jpg"><img src="img/three-202512.jpg" height="150"></a>
+<a href="img/kuma+mini.jpg"><img src="img/kuma+mini.jpg" height="150"></a>
+<a href="img/kuma+koma.jpg"><img src="img/kuma+koma.jpg" height="150"></a>
+何匹？／三匹いますよ／悪猫カップル／一触即発
+</details>
+</details id=c3>
+
+
+<details id="refs">
+<summary>文献</summary>
+<ul>
+<li><a href="https://github.com/ky-heretix/moc-js/" target="_blank">GitHub</a>
+<li><a href="https://qiita.com/ky-heretix/items/103068878c74ab4b029a" target="_blank">Qiita</a>
+</ul>
+</details id=refs>
+
+</details id=toc>
 </body>
 </html>
 

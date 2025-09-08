@@ -1,22 +1,41 @@
-header { text-align: left; font-weight: bold; }
-footer { text-align: right; font-weight: bold; color: gray; }
-h1 { text-align: center; }
-
-.ctrl { padding: 0.5ex; text-align: center; }
-.ctrl button { font-size: 0.8em; }
-
+html { margin: 0; padding: 0; }
+body {
+	margin: 0; padding: 0 3mm;
+	min-height: 100vh;
+	font-family: sans-serif;
+}
+header {
+	margin: 0; padding: 1mm 0 0 0;
+	text-align: left;
+	font-weight: bold;
+	font-size: 80%;
+}
+footer {
+	margin: 0 -3mm; padding: 1mm 5mm;
+	position: sticky; top: 100%;
+	text-align: right;
+	font-weight: bold; font-size: 60%;
+}
+h1 {
+	margin: 0.5ex 0; padding: 1ex;
+	border-radius: 1ex;
+	text-align: center;
+}
+#CP { text-align: center; }
+.ctrl { margin: 1mm; font-size: 60%; }
 .knob {
-	font-size: 0.8em;
+	font-size: 80%;
 	text-align: center;
         cursor: pointer;
 	color: gray;
 	background: linear-gradient(transparent 50%, lightgray 100%);
 }
-
 details {
-	max-height: 3em;
-	overflow: hidden;
+	max-height: 5em;
 	transition: all 0.5s;
+}
+details details {
+	margin-left: 2em;
 }
 details[open] {
 	max-height: 500em;
@@ -32,5 +51,7 @@ summary {
 }
 summary:hover { color: blue; }
 summary::marker { content: "🟩 "; }
-details[open] summary::marker { content: "🟥 "; }
+details[open] > summary::marker { content: "🟥 "; }
+!summary::marker { content: "📗 "; }
+!details[open] > summary::marker { content: "📖 "; }
 

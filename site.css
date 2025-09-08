@@ -1,0 +1,19 @@
+@import "moc.css";
+body {
+	background-color: #FFFFF0;
+}
+h1 {
+	background: aquamarine;
+	!background: darkturquoise;
+}
+header {
+	font-weight: bold;
+}
+footer {
+	color: dimgray;
+	background-color: wheat;
+}
+img { float: left; }
+details:before { content: ""; display: block; clear: both; }
+details:after { content: ""; display: block; clear: both; }
+
