@@ -205,8 +205,6 @@ function Init() {
 <p>
 概要...
 </p>
-<button onclick="OpenAll();">Open All</button>
-<button onclick="CloseAll();">Close All</button>
 <details id="A">
 <summary>セクション A</summary>
 ...
@@ -218,9 +216,6 @@ function Init() {
 
 <details id="B">
 <summary>セクション B</summary>
-...
-□□については，
-<a href="#A" onclick="Open(A)">前章</a> で指摘した通りである．
 ...
 </details>
 ...
