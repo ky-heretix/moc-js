@@ -11,15 +11,12 @@ Ver.2025.09.09
 // 構成要素のデフォルト設定
 const def = {
 	knob:	// 各<details>の折畳ハンドル
-//`<button class="onclick="Close(this.parentNode)">close</button>`,	// ボタン版
-`
-<!--
-<div class="knob" onclick="Close(this.parentNode)" title="閉店ガラガラ〜">
+`<button class="ctrl" onclick="Close(this.parentNode)">🔺 close</button>`,	// ボタン版
+/*
+`<div class="knob" onclick="Close(this.parentNode)" title="閉店ガラガラ〜">
 ＝　▲　＝　▲　＝　▲　＝
-</div>
--->
-<button class="ctrl" onclick="Close(this.parentNode)">🔺 close</button>
-`,	// シャッター風
+</div>`,	// シャッター風
+*/
 	ctrl:		// 制御盤（全<details>の開閉ボタン）
 `<div id="CP">
 <hr>
