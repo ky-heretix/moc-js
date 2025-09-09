@@ -17,12 +17,12 @@ HTML の `<details>`＆`<summary>`タグを利用すると，
 目次のどの項目を開くべきか不明．
 
 本スクリプト `moc.js` は，これらの問題点を解決します．
+<!--
 まあ，<a href="demo/index.html"
 target="_blank">デモ（外部サイト）</a>でも御覧ください．
-<!--
+-->
 まあ，<a href="https://www.kushiro-ct.ac.jp/yanagawa/moc-js/demo/index.html"
 target="_blank">デモ（外部サイト）</a>でも御覧ください．
--->
 「御品書だよ `<summary>` は．」
 
 ## ウェブサイトへの導入方法
